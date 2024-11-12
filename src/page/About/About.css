@@ -1,0 +1,90 @@
+.about {
+    display: flex;
+    
+    width: 99%;
+    height: 100%;
+}
+
+.about-me {
+    max-width: 45%;
+    min-width: 40%;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.skill-listing {
+    display: flex;
+    padding: 5px;
+    list-style: none;
+    flex-wrap: wrap;
+    min-width: 49%;
+    height: 100%;
+}
+
+.logos {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-cover {
+    width: 80px;
+    height: 80px;
+}
+
+.about-btn {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 5px;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 255, 0.801), rgba(0, 255, 255, 0.737));
+    transition-duration: 1s;
+}
+
+.about-btn:hover {
+    background-color: red;
+    border: 1px solid white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+}
+.more {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.resume {
+    width: 100%;
+    height: 80%;
+}
+
+@media (max-width: 800px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .skill-listing {
+        width: 95%;
+    }
+    .about-me {
+        max-width: 95%;
+    }
+
+    .more {
+        
+        align-items: center;
+    }
+
+    .resume {
+        width: 80%;
+        height: 400px;
+    }
+}

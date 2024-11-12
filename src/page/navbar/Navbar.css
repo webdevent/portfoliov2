@@ -1,0 +1,121 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 3px double rgb(1, 107, 228);
+    height: 100px;
+}
+
+.nav-logo {
+    font-size: 40px;
+    color: white;
+    text-shadow: 140px 0px 0px aqua,
+    0px 30px 0px blue;  
+}
+
+.routes {
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.route {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.route.active {
+    color: rgb(41, 116, 255);
+}
+
+.route.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: white;
+    animation: sliding infinite 1s;
+}
+
+.route:hover {
+    color: rgb(41, 116, 255);
+}
+
+.route:hover::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: white;
+    animation: sliding infinite 1s;
+}
+
+.nav-btn {
+    background: linear-gradient(to right, rgba(14, 14, 255, 0.877), rgba(0, 214, 214, 0.849));
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 0px 5px;
+    display: none;
+}
+
+.menu-active {
+    display: flex;
+}
+
+@keyframes sliding {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+        width: 0px;
+    }
+    60% {
+        width: 40px;
+    }
+    75% {
+        transform: translateX(45px);
+        width: 0px;
+    }
+    100% {
+        transform: translateX(0);
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .nav-logo {
+        font-size: 35px;
+        text-shadow: 4px 0px 5px aqua,
+        0px 4px 5px blue;  
+    }
+    .routes {
+        display: none;
+    }
+    .menu-active {
+        flex-direction: column;
+        width: fit-content;
+        padding: 0px;
+        position: fixed;
+        top: 30%;
+        left: 30%;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.751);
+        z-index: 2;
+        display: flex;
+    }
+    .routes li {
+        width: fit-content;
+    }
+
+    .nav-btn {
+        display: block;
+    }
+}

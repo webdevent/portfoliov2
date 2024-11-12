@@ -1,0 +1,87 @@
+.home {
+    width: 97%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+h2 {
+    margin: 0px;
+}
+
+.expand {
+    border-right: 2px solid white;
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 1s infinite, expand 5s infinite;
+}
+
+@keyframes expand {
+    from { width: 0;}
+    to {width: 50%;}
+}
+
+@keyframes blink {
+    0% {
+        border-right: 2px solid white
+    }
+    50% {
+        border-right: transparent;
+        
+    }
+    100% {
+        border-right: 2px solid white;
+    }
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 30px;
+    color: rgb(0, 119, 255);
+}
+
+.home-btn {
+    background: linear-gradient(to right, rgba(14, 14, 255, 0.877), rgba(0, 214, 214, 0.849));
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 0px 5px;
+}
+
+.home-link {
+    text-decoration: none;
+    color: white;
+}
+
+.img-cover {
+    width: 500px;
+    height: 360px;
+}
+
+.main-img {
+    object-fit: cover;
+    width: 95%;
+    height: 95%;
+    filter: drop-shadow(5px 5px 10px white);
+}
+
+@media (max-width: 500px) {
+    .home {
+        width: 89%;
+        flex-direction: column-reverse;
+    }
+
+    .img-cover {
+        width: 400px;
+        height: 270px;
+    }
+    .intro {
+        width: 100%;
+    }
+}
