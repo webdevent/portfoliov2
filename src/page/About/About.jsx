@@ -1,6 +1,6 @@
 import React from 'react'
 import skillsList from './about.js'
-import resume from "../../assets/document.pdf"
+import resume from "../asset/document.pdf"
 import "./About.css"
 const AboutPage = () => {
   return (
